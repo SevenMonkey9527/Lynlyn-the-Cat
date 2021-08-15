@@ -5,8 +5,8 @@
 #define CONTROL_RABBIT_TURN_LEFT    'a'
 #define CONTROL_RABBIT_TURN_RIGHT   'd'
 
-#define EXECUTION_INTERVAL_TIME_US  200000     // 1,000,000 us = 1 second
-#define CONGRATULATION_TIME_US      5000000
+#define EXECUTION_INTERVAL_TIME_US  300000     // 1,000,000 us = 1 second
+#define CONGRATULATION_TIME_US      3000000
 
 #define OPTION_EXIT                 'q'
 

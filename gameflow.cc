@@ -27,7 +27,6 @@ GameFlow& GameFlow::gameStart(void) {
 
     for (__m_curr_level = 1; __m_curr_level <= THE_FINAL_LEVEL;) {
         __m_getFilename(filename, __m_curr_level);
-        std::cout << filename << std::endl;
 
         __m_map.createMap(filename.c_str());
 
@@ -73,6 +72,8 @@ GameFlow& GameFlow::__m_levelUp(void) {
 
 GameFlow& GameFlow::__m_showInterface(std::string& cmd, std::string& msg) {
     __m_newPage();
+    std::cout << " - Level " << __m_curr_level << " - "<< std::endl;
+    std::cout << std::endl;
     __m_printScreen();
     __m_printHint();
     std::cout << "Messages: " << msg << std::endl;
@@ -84,6 +85,8 @@ GameFlow& GameFlow::__m_showInterface(std::string& cmd, std::string& msg) {
 
 GameFlow& GameFlow::__m_showExecution(const std::string& cmd, const std::string& msg, const unsigned int gap) {
     __m_newPage();
+    std::cout << " - Level " << __m_curr_level << " - "<< std::endl;
+    std::cout << std::endl;
     __m_printScreen();
     __m_printHint();
     std::cout << "Messages: " << msg << std::endl;
@@ -106,20 +109,20 @@ GameFlow& GameFlow::__m_printScreen(void) {
 
 GameFlow& GameFlow::__m_printHint(void) {
     std::cout << "--------------------" << std::endl;
-    std::cout << "Options:" << std::endl;
+    std::cout << "Option:" << std::endl;
     std::cout << " - exit: '" << OPTION_EXIT << "';" << std::endl;
     std::cout << "--------------------" << std::endl;
     std::cout << "Command:" << std::endl;
     std::cout << " - Go Ahead  :  '" << CONTROL_RABBIT_GO_AHEAD      << "';" << std::endl;
     std::cout << " - Turn Left :  '" << CONTROL_RABBIT_TURN_LEFT     << "';" << std::endl;
     std::cout << " - Turn Right:  '" << CONTROL_RABBIT_TURN_RIGHT    << "';" << std::endl;
-    std::cout << " - Loop      :  (<command> * <times>);" << std::endl;
+    std::cout << " - Loop      :  ([commands]*[times]);" << std::endl;
     std::cout << "--------------------" << std::endl;
     return *this;
 }
 
 GameFlow& GameFlow::__m_getCommands(std::string& cmd) {
-    std::cout << "Enter the command: " << std::flush;
+    std::cout << "Enter the commands: " << std::flush;
     std::cin >> cmd;
     return *this;
 }

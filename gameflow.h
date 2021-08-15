@@ -5,7 +5,7 @@
 #include "def.h"
 #include "map.h"
 
-#define THE_FINAL_LEVEL 6
+#define THE_FINAL_LEVEL 7
 #define TOP_OF_PAGE_DISTANCE 50
 
 class GameFlow {

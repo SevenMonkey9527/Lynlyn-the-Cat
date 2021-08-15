@@ -43,8 +43,8 @@ GameFlow& GameFlow::gameStart(void) {
         if (__m_map.isPassed()) {
             __m_showExecution(input, "Congratulation!! \\(O v O)/", CONGRATULATION_TIME_US);
             __m_levelUp();
-            __m_map.removeMap();
         } else message = "Oops!! Try again! (o A O)!!";
+        __m_map.removeMap();
     }
 
     if (__m_curr_level > THE_FINAL_LEVEL) {
